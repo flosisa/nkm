@@ -1,0 +1,62 @@
+.control-panel {
+  // display: flex;
+  // align-items: center;
+  background: $white;
+  @include all-radius;
+  .control {
+    // display: flex;
+    // justify-content: flex-start;
+    padding: 14px 20px;
+    .control-item {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+      .title {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        color: $bgCloudBurst;
+      }
+      .subtitle {
+        font-size: 14px;
+        line-height: 16px;
+        color: $cloudBurst;
+        a {
+          display: inline;
+          font-size: 14px;
+          line-height: 16px;
+          text-decoration-line: underline !important;
+          color: $gray;
+        }
+      }
+    }
+  }
+  &.physical-person {
+    .control {
+      .control-item {
+        .title {
+          color: $green;
+        }
+      }
+    }
+  }
+  &.self-employed-person {
+    .control {
+      .control-item {
+        .title {
+          color: $teal;
+        }
+      }
+    }
+  }
+  &.legal-entity {
+    .control {
+      .control-item {
+        .title {
+          color: $malibu2;
+        }
+      }
+    }
+  }
+}

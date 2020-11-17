@@ -1,0 +1,22 @@
+.content-wrapper {
+  padding-left: 375px;
+  .my-container {
+    padding-right: 20px;
+    max-width: 100%;
+    width: 100%;
+  }
+  &.menu-roll-up {
+    padding-left: 20px;
+    & .sidebar {
+      background-color: transparent;
+      box-shadow: none;
+      &-header {
+        box-shadow: 0 0 14px rgba(0, 0, 0, 0.25);
+      }
+      &-body {
+        padding-left: 0px;
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,272 @@
+._btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration-line: underline !important;
+  text-transform: uppercase;
+}
+.btn-white {
+  @include whiteButton;
+  &.color-cloud-burst {
+    color: $cloudBurst;
+  }
+  &.color-light-blue {
+    color: $malibu2;
+  }
+  &.color-rouge {
+    color: $teal;
+  }
+}
+.btn-gray {
+  @include grayButton;
+}
+.view-btn {
+  @include padding-all(17px, 48px, 17px, 20px);
+  background-color: $bgGray;
+  color: $bgCloudBurst;
+  display: inline-block;
+  @include radius-auto(0, 0, 6px, 0);
+  position: relative;
+  .icon {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    width: 7px;
+    height: 14px;
+    margin: auto;
+    img {
+      object-fit: contain;
+      width: 7px;
+      height: 14px;
+    }
+  }
+  &.color-green {
+    color: $green;
+  }
+  &.colo-light-blue {
+    color: $malibu2;
+  }
+  &.color-rouge {
+    color: $teal;
+  }
+}
+.add-btn {
+  @include padding-all(15px, 30px, 15px, 50px);
+  @include radius-auto(0px, 0px, 6px, 0px);
+  background-color: $bgGray;
+  color: $bgCloudBurst;
+  position: relative;
+  .icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+    width: 10px;
+    height: 10px;
+    margin: auto;
+    img {
+      width: 10px;
+      height: 10px;
+      object-fit: contain;
+    }
+  }
+}
+.event-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration-line: underline !important;
+  white-space: nowrap;
+  @include tUppercase;
+  color: $bgCloudBurst;
+  @include positionRelative(0px, 0px, 0px, auto, 7px, 14px, contain, "/assets/svg/next-blue.svg");
+  display: inline-block;
+  padding-right: 20px;
+  &.arrow-left {
+    padding-right: 0;
+    padding-left: 20px;
+    @include positionRelative(0px, auto, 0px, 0px, 7px, 14px, contain, "/assets/svg/next-blue.svg");
+    &.color-light-blue {
+      color: $malibu2;
+      @include positionRelative(0px, auto, 0px, 0px, 7px, 14px, contain, "/assets/svg/next-light-blue.svg");
+    }
+  }
+  &.color-light-blue {
+    color: $malibu2;
+    @include positionRelative(0px, 0px, 0px, auto, 7px, 14px, contain, "/assets/svg/next-light-blue.svg");
+  }
+  &.color-rouge {
+    color: $teal;
+    @include positionRelative(0px, auto, 0px, 0px, 7px, 14px, contain, "/assets/svg/next-teal.svg");
+  }
+}
+.btn-link {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  text-decoration-line: underline !important;
+  color: $white;
+}
+.btn-outline-white {
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 26px;
+  @include tUppercase;
+  color: $white;
+  display: inline-block;
+  border: 1px solid $white;
+  @include all-radius;
+}
+.arrow-btn {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration-line: underline !important;
+  @include tUppercase;
+  color: $teal;
+  position: relative;
+  padding-left: 27px;
+  .icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 17px;
+    height: 14px;
+    margin: auto;
+    img {
+      object-fit: contain;
+      width: 17px;
+      height: 14px;
+    }
+  }
+}
+.add-activities-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: $size-14;
+  color: $gray;
+  border: 1px dashed $gray;
+  @include all-radius;
+  cursor: pointer;
+  height: 50px;
+  & .icon {
+    display: flex;
+    align-items: center;
+    & > img {
+      width: 18px;
+      height: 18px;
+      object-fit: contain;
+      object-position: center;
+      margin-right: 10px;
+    }
+  }
+}
+.activities-item {
+  font-weight: bold;
+  font-size: $size-12;
+  line-height: 24px;
+  color: $gray;
+  background: $white;
+  @include shadow;
+  @include all-radius;
+  @include padding-all(10px, 10px, 10px, 10px);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 40px;
+  & > div {
+    display: flex;
+    align-items: center;
+    & > span {
+      @extend .flex-grow;
+    }
+    & > .icon {
+      cursor: pointer;
+      padding: 0px 8px;
+      & > img {
+        width: 10px;
+        height: 10px;
+        object-fit: contain;
+        object-position: center;
+      }
+    }
+  }
+}
+.primary {
+  font-weight: bold;
+  font-size: $size-14;
+  line-height: 24px;
+  @include tUppercase;
+  color: $white;
+  @include radius-auto;
+  @include padding-all(11px, 24px, 11px, 24px);
+  background: $blue;
+  &.bgc-green {
+    background-color: $bgGreen;
+  }
+}
+.download-btn {
+  font-weight: bold;
+  font-size: $size-14;
+  line-height: 24px;
+  @include tUppercase;
+  color: $white;
+  padding: 11px 54px;
+  background: $teal;
+  @include all-radius;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+}
+.print-btn {
+  padding: 11px 34px;
+  font-weight: bold;
+  font-size: $size-14;
+  line-height: 24px;
+  color: $mischka;
+  @include tUppercase;
+  border: 1px solid $mischka;
+  @include all-radius;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    img {
+      width: 20px;
+      height: 20px;
+      object-fit: contain;
+    }
+  }
+}
+.change-data {
+  padding: 11px 19px;
+  border: 1px dashed $mischka;
+  @include all-radius;
+  font-weight: bold;
+  font-size: $size-14;
+  line-height: 24px;
+  @include tUppercase;
+  color: $mischka;
+  text-align: center;
+  .color-teal {
+    color: $teal;
+  }
+}

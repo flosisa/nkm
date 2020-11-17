@@ -1,0 +1,85 @@
+@mixin all-radius($all-radius: 6px) {
+  border-radius: $all-radius;
+}
+@mixin radius-auto($top-left: 6px, $top-right: 6px, $bottom-right: 6px, $bottom-left: 6px) {
+  border-radius: $top-left $top-right $bottom-right $bottom-left;
+}
+@mixin padding-all($top: 30px, $right: 30px, $bottom: 30px, $left: 30px) {
+  padding: $top $right $bottom $left;
+}
+@mixin shadow {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+@mixin tUppercase {
+  text-transform: uppercase !important;
+}
+@mixin tLovercase {
+  text-transform: lowercase !important;
+}
+@mixin tNone {
+  text-transform: none !important;
+}
+@mixin whiteButton {
+  @include shadow;
+  @include padding-all(11px, 47px, 11px, 47px);
+  @include all-radius;
+  @include tUppercase;
+  background-color: $white;
+  color: $green;
+  font-size: $size-14;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 24px;
+}
+@mixin grayButton {
+  @include radius-auto(0px, 0px, 6px, 0px);
+  @include padding-all(11px, 30px, 11px, 30px);
+  @include tUppercase;
+  color: $green;
+  background-color: $bgGray;
+  font-size: $size-14;
+  font-weight: 500;
+  line-height: 24px;
+  text-decoration-line: underline !important;
+}
+@mixin positionRelative($top, $right, $bottom, $left, $width, $height, $bgSize, $bgUrl) {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: $top;
+    left: $left;
+    right: $right;
+    bottom: $bottom;
+    width: $width;
+    height: $height;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $bgSize;
+    background-image: url($bgUrl);
+  }
+}
+//mixin test
+@mixin radius6-padding30-shadow {
+  @include all-radius(6px);
+  @include padding-all;
+  @include shadow;
+}
+
+@mixin card($top, $left) {
+  @include all-radius(6px);
+  @include padding-all(30px, 30px, 0, 30px);
+  @include shadow;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    top: $top;
+    left: $left;
+    width: 20px;
+    height: 1px;
+    margin: auto;
+    border-bottom: 1px solid $wafer;
+  }
+}
